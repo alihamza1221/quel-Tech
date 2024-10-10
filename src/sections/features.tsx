@@ -1,4 +1,4 @@
-import Marquee from 'react-fast-marquee'
+import Marquee from "react-fast-marquee";
 
 const Star = () => {
   return (
@@ -12,8 +12,8 @@ const Star = () => {
         className="fill-text dark:fill-darkText"
       />
     </svg>
-  )
-}
+  );
+};
 
 const Star2 = () => {
   return (
@@ -30,8 +30,8 @@ const Star2 = () => {
         className="fill-text dark:fill-darkText"
       />
     </svg>
-  )
-}
+  );
+};
 
 const Star3 = () => {
   return (
@@ -46,8 +46,8 @@ const Star3 = () => {
         className="fill-text dark:fill-darkText"
       />
     </svg>
-  )
-}
+  );
+};
 
 const Star4 = () => {
   return (
@@ -63,8 +63,8 @@ const Star4 = () => {
         strokeWidth="2.47333"
       />
     </svg>
-  )
-}
+  );
+};
 
 const Plus = () => {
   return (
@@ -79,8 +79,8 @@ const Plus = () => {
         className="fill-text dark:fill-darkText"
       />
     </svg>
-  )
-}
+  );
+};
 
 const Pentagon = () => {
   return (
@@ -95,29 +95,49 @@ const Pentagon = () => {
         className="fill-text dark:fill-darkText"
       />
     </svg>
-  )
-}
+  );
+};
 
 export default function Features() {
-  const icons = [Star, Star2, Star3, Star4, Plus, Pentagon]
+  const icons = [Star, Star2, Star3, Star4, Plus, Pentagon];
 
-  const feature = {
-    title: 'Feature',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque reiciendis ab similique expedita quaerat nesciunt.',
-  }
-
-  const features = Array.from({ length: 6 }, () => ({ ...feature }))
+  const features = [
+    {
+      title: "Smart Management",
+      text: "Effortlessly organize your tasks by priority, subject, or deadlines. Edit, delete, and mark them as complete with just a click, ensuring no task goes unnoticed.",
+    },
+    {
+      title: "Study Timetable",
+      text: "Generate a personalized study plan that adapts to your schedule. Input your subjects and study hours, and let our AI create the optimal timetable for you.",
+    },
+    {
+      title: "Progress at a Glance",
+      text: "Visualize your academic journey with a simple progress tracker. Track task completion and subject mastery to see your growth over time.",
+    },
+    {
+      title: "Advanced Filters",
+      text: "Find what you need quickly with robust search options. Filter tasks by priority, subject, or deadlines to keep everything at your fingertips.",
+    },
+    {
+      title: "Seamless  Experience",
+      text: "Designed for students and teams alike. Create individual accounts, manage tasks independently, and keep personal progress.",
+    },
+    {
+      title: "Real-Time Notifications",
+      text: "Stay on top of your tasks with real-time alerts. Receive reminders for upcoming deadlines and completed milestones, ensuring you never miss a beat.",
+    },
+  ];
 
   return (
     <div>
       <section className="border-t-border dark:border-t-darkBorder dark:bg-darkBg border-t-2 bg-bg py-20 font-base lg:py-[100px]">
         <h2 className="mb-14 px-5 text-center text-2xl font-heading md:text-3xl lg:mb-20 lg:text-4xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing
+          Unlock the Greater Productivity with QuelTech
         </h2>
 
         <div className="mx-auto grid w-container max-w-full grid-cols-1 gap-5 px-5 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => {
-            const Icon = icons[i]
+            const Icon = icons[i];
 
             return (
               <div
@@ -131,7 +151,7 @@ export default function Features() {
                 </h4>
                 <p>{feature.text}</p>
               </div>
-            )
+            );
           })}
         </div>
       </section>
@@ -141,19 +161,19 @@ export default function Features() {
           direction="left"
         >
           {Array(10)
-            .fill('xd')
+            .fill("xd")
             .map((x, id) => {
               return (
                 <div className="flex items-center" key={id}>
                   <span className="mx-10 text-xl font-heading sm:text-2xl lg:text-4xl">
-                    Neobrutalism components
+                    Quel Tech
                   </span>
                   <Star3 />
                 </div>
-              )
+              );
             })}
         </Marquee>
       </div>
     </div>
-  )
+  );
 }

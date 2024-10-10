@@ -8,6 +8,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import AuthProvider from "@/providers/nextAuthProvider";
 import { getServerSession } from "next-auth/next";
 import { nextAuthOptions } from "./api/auth/[...nextauth]/authOptions";
+
 const dmSans = DM_Sans({ subsets: ["latin"] });
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,25 +27,24 @@ export const metadata: Metadata = {
     "created a next js based solution for ... and presented on web-athon",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = getServerSession(nextAuthOptions);
-  if (!session) return <div>loading... or unauthorized!</div>;
+  const session = await getServerSession(nextAuthOptions);
   return (
-    <AuthProvider session={session}>
-      <html lang="en">
-        <body
-          className={`${dmSans.className} ${geistSans.variable} ${geistMono.variable} `}
-        >
+    <html lang="en">
+      <body
+        className={`${dmSans.className} ${geistSans.variable} ${geistMono.variable} `}
+      >
+        <AuthProvider session={session}>
           <ThemeProvider attribute="class" disableTransitionOnChange>
             {children}
             <ThemeSwitcher />
           </ThemeProvider>
-        </body>
-      </html>
-    </AuthProvider>
+        </AuthProvider>
+      </body>
+    </html>
   );
 }

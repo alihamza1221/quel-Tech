@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion'
-import Marquee from 'react-fast-marquee'
+} from "@/components/ui/accordion";
+import Marquee from "react-fast-marquee";
 
 const Star3 = () => {
   return (
@@ -19,8 +19,8 @@ const Star3 = () => {
         className="fill-text dark:fill-darkText"
       />
     </svg>
-  )
-}
+  );
+};
 
 export default function Faq() {
   return (
@@ -33,35 +33,47 @@ export default function Faq() {
         <div className="mx-auto grid w-[700px] max-w-full px-5">
           <Accordion className="text-base sm:text-lg" type="single" collapsible>
             <AccordionItem className="mb-2" value="item-1">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>
+                How does the study timetable generator work?
+              </AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                Simply input your subjects and the hours you have available to
+                study each day. The app will automatically create a balanced
+                study plan tailored to your schedule, helping you stay organized
+                and focused.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem className="mb-2" value="item-2">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>
+                Can I track my progress for multiple subjects?
+              </AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                Yes, the progress tracker lets you monitor the completion of
+                tasks across different subjects. You can visualize your
+                achievements and track how much progress you’ve made in each
+                subject.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem className="mb-2" value="item-3">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>
+                Is the app suitable for group study sessions?
+              </AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                Absolutely! With multi-user support, each user can create an
+                individual account to manage their own tasks. It’s a great tool
+                for study groups, allowing everyone to stay on top of their
+                schedules while working together.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger>Lorem ipsum dolor sit amet</AccordionTrigger>
+              <AccordionTrigger>
+                What kind of tasks can I create and manage?
+              </AccordionTrigger>
               <AccordionContent>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusantium suscipit sed nihil fuga sapiente facere dolore
-                corrupti labore illum reiciendis?
+                You can create tasks for anything—from assignments and study
+                goals to personal to-dos. You can categorize tasks by priority,
+                subject, or deadline, and even search or filter them for easy
+                access.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -73,19 +85,19 @@ export default function Faq() {
           direction="right"
         >
           {Array(10)
-            .fill('xd')
+            .fill("xd")
             .map((x, id) => {
               return (
                 <div className="flex items-center" key={id}>
                   <span className="mx-10 text-xl font-heading sm:text-2xl lg:text-4xl">
-                    Neobrutalism components
+                    UR QuelTech
                   </span>
                   <Star3 />
                 </div>
-              )
+              );
             })}
         </Marquee>
       </div>
     </div>
-  )
+  );
 }

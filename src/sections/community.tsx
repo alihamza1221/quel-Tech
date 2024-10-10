@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker'
+import { faker } from "@faker-js/faker";
 
 export default function Community() {
   const review = () => {
@@ -7,8 +7,31 @@ export default function Community() {
       fullName: faker.person.fullName(),
       jobTitle: faker.person.jobTitle(),
       review: faker.lorem.sentences({ min: 1, max: 3 }),
-    }
-  }
+    };
+  };
+  const testimonials = [
+    {
+      text: "I love the app! It increased my productivity.",
+    },
+    {
+      text: "The task manager is super easy to use and keeps me organized!",
+    },
+    {
+      text: "The study timetable feature helped me stay on track with my exams.",
+    },
+    {
+      text: "A must-have for students! It simplified my daily routine.",
+    },
+    {
+      text: "Managing my tasks has never been this efficient and fun!",
+    },
+    {
+      text: "The app’s notifications are perfect for keeping me on schedule.",
+    },
+    {
+      text: "I feel more in control of my time and priorities thanks to this app!",
+    },
+  ];
 
   return (
     <section className="border-b-border dark:border-b-darkBorder dark:bg-secondaryBlack inset-0 flex w-full flex-col items-center justify-center border-b-2 bg-white bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px] font-base">
@@ -40,7 +63,7 @@ export default function Community() {
                       <p className="text-sm font-base">{jobTitle}</p>
                     </div>
                   </div>
-                  <div className="mt-5">{review}</div>
+                  <div className="mt-5">{testimonials[index].text}</div>
                 </div>
               ))}
             </div>
@@ -48,5 +71,5 @@ export default function Community() {
         </div>
       </div>
     </section>
-  )
+  );
 }

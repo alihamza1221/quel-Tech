@@ -1,4 +1,4 @@
-import PricingPlan from '@/components/pricing-plan'
+import PricingPlan from "@/components/pricing-plan";
 
 export default function Pricing() {
   return (
@@ -10,43 +10,46 @@ export default function Pricing() {
         <div className="grid grid-cols-3 gap-8 w900:mx-auto w900:w-2/3 w900:grid-cols-1 w500:w-full">
           <PricingPlan
             planName="Basic"
-            description="Lorem ipsum dolor sit amet"
+            description="Get started with essential tools"
             price="10"
             perks={[
-              '5 products',
-              'Up to 1,000 subscribers',
-              'Basic analytics',
-              '48-hour support response time',
+              "Access to Task Manager for organizing tasks and to-dos",
+              "Basic Study Timetable Generator with up to 3 subjects",
+              "Progress Tracker for a single subject",
+              "1 User Account with multi-device sync",
+              "Email support",
             ]}
           />
           <PricingPlan
             planName="Essential"
-            description="Lorem ipsum dolor sit amet"
+            description="Perfect for students looking to optimize their study"
             price="25"
             perks={[
-              '25 products',
-              'Up to 10,000 subscribers',
-              'Advanced analytics',
-              '24-hour support response time',
-              'Marketing automations',
+              "Task Manager with priority-based sorting and search",
+              "Enhanced Study Timetable with up to 10 subjects",
+              "Progress Tracker with analytics for multiple subjects",
+              "3 User Accounts with multi-device sync",
+              "Priority email and chat support",
+              "Customizable notifications for tasks and deadlines",
             ]}
             mostPopular
           />
           <PricingPlan
             planName="Growth"
-            description="Lorem ipsum dolor sit amet"
+            description="A comprehensive productivity & study experience"
             price="50"
             perks={[
-              'Unlimited products',
-              'Unlimited subscribers',
-              'Advanced analytics',
-              '1-hour, dedicated support response time',
-              'Marketing automations',
-              'Custom reporting tools',
+              "Unlimited access to Task Manager with advanced filters",
+              "Study Timetable Generator with unlimited subjects",
+              "Progress Tracker with in-depth analytics",
+              "Up to 10 User Accounts with multi-device sync",
+              "Priority phone, email, and chat support",
+              "Integration with calendar apps (Google Calendar)",
+              "Early access to new features and updates",
             ]}
           />
         </div>
       </div>
     </section>
-  )
+  );
 }

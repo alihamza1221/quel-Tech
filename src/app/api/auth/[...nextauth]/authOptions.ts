@@ -32,11 +32,11 @@ export const nextAuthOptions: NextAuthOptions = {
           console.log("user already exists\n");
           return true;
         }
-
+        console.log("signin user", user);
         const newUser = await userModel.create({
           ...user,
         });
-        newUser.save();
+        await newUser.save();
       } catch (err) {
         return false;
       }
@@ -49,11 +49,6 @@ export const nextAuthOptions: NextAuthOptions = {
     },
     //update user in session
 
-    /* @session.user = { 
-        username: string;
-        email: string;
-        image: string;
-         } */
     //@ts-ignore
     async session({ session, token }) {
       /*  @session.user = { 
@@ -62,8 +57,6 @@ export const nextAuthOptions: NextAuthOptions = {
         image: https://example.com/image.jpg;
 
       } */
-
-      console.log(session.user);
 
       return session;
     },

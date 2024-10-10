@@ -1,8 +1,6 @@
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { getServerSession, Session } from "next-auth";
 
 export default async function PricingPlan({
   perks,
@@ -17,12 +15,6 @@ export default async function PricingPlan({
   description: string;
   price: string;
 }) {
-  const fetchData = async (): Promise<Session | null> => {
-    const session = await getServerSession();
-    console.log("session", session);
-    return session;
-  };
-  const session = await fetchData();
   return (
     <div className="border-border dark:border-darkBorder dark:bg-secondaryBlack flex flex-col justify-between rounded-base border-2 bg-white p-5">
       <div>

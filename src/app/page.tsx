@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "@/sections/header";
 import Features from "@/sections/features";
 import Community from "@/sections/community";

@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { userModel } from "@/db/models/user";
 import dbConnect from "@/db/mongooseConnect";
-export const GET = async (req: NextRequest) => {
+export const GET = async () => {
   //get users data from database
 
   await dbConnect();

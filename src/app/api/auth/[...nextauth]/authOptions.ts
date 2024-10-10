@@ -38,19 +38,18 @@ export const nextAuthOptions: NextAuthOptions = {
         });
         await newUser.save();
       } catch (err) {
-        return false;
+        if (err) return false;
       }
 
       return true;
     },
-    //@ts-ignore
+
     async jwt({ token }) {
       return token;
     },
     //update user in session
 
-    //@ts-ignore
-    async session({ session, token }) {
+    async session({ session }) {
       /*  @session.user = { 
         username: "username";
         email: email@gmail.com;
